@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import { mockApiService } from '../mocks/mockApiService';
 
 export default function CreateCourse() {
   const [courseName, setCourseName] = useState('');
@@ -8,9 +9,14 @@ export default function CreateCourse() {
 
   const handleCreateCourse = async (event: React.FormEvent) => {
     event.preventDefault();
-    // Placeholder for course creation logic
-    // This should send the course data to the backend to create a new course
-    console.log('Creating course:', courseName, courseDescription);
+    // Simulate sending course data to the backend to create a new course
+    try {
+      const newCourse = await mockApiService.createCourse(courseName, courseDescription);
+      console.log('Course created:', newCourse);
+      // Redirect to manage courses or show success message
+    } catch (error) {
+      console.error('Error creating course:', error);
+    }
   };
 
   return (
