@@ -3,10 +3,20 @@ import { useState } from 'react';
 export default function Chat() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
+  const [socket, setSocket] = useState(null);
+
+  useEffect(() => {
+    // TODO: Initialize WebSocket connection
+    const newSocket = new WebSocket('ws://backend-service-url');
+    setSocket(newSocket);
+    return () => newSocket.close();
+  }, [setSocket]);
 
   const sendMessage = () => {
     if (input.trim()) {
-      setMessages([...messages, { user: 'student', text: input }]);
+      const message = { user: 'student', text: input };
+      socket.send(JSON.stringify(message)); // Send message through WebSocket
+      setMessages([...messages, message]);
       setInput('');
     }
   };

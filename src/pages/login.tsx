@@ -8,17 +8,31 @@ export default function LoginPage() {
 
   const handleLogin = async (event: React.FormEvent) => {
     event.preventDefault();
-    // Placeholder for authentication logic
-    // Determine user type and redirect to the appropriate dashboard
-    const userType = await determineUserType(username, password);
-    if (userType === 'teacher') {
-      router.push('/teacher-dashboard');
-    } else if (userType === 'student') {
-      router.push('/student-dashboard');
-    } else {
-      // Handle login error
+    // TODO: Implement actual authentication logic with backend
+    try {
+      const userType = await authenticateUser(username, password);
+      if (userType === 'teacher') {
+        router.push('/teacher-dashboard');
+      } else if (userType === 'student') {
+        router.push('/student-dashboard');
+      } else {
+        console.error('Login failed: Invalid user type');
+      }
+    } catch (error) {
+      console.error('Login failed:', error);
     }
   };
+
+  async function authenticateUser(username: string, password: string): Promise<'teacher' | 'student' | null> {
+    // TODO: Replace with a call to the backend authentication service
+    // For now, we simulate the authentication
+    if (username.startsWith('teacher')) {
+      return 'teacher';
+    } else if (username.startsWith('student')) {
+      return 'student';
+    }
+    return null;
+  }
 
   return (
     <form onSubmit={handleLogin}>
