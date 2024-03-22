@@ -3,6 +3,15 @@ import Link from 'next/link';
 export default function StudentProgress() {
   // Placeholder for state and logic to fetch and display student progress
   // For the demo, we'll use static data
+  useEffect(() => {
+    // Fetch student progress data from the backend
+    async function fetchStudentProgress() {
+      // Placeholder for backend API call to fetch progress data
+      const progressData = await getStudentProgress();
+      // Update state with fetched data
+    }
+    fetchStudentProgress();
+  }, []);
 
   const mockStudentProgress = [
     { name: 'Student A', progress: 75 },

@@ -9,6 +9,7 @@ export default function LoginPage() {
   const handleLogin = async (event: React.FormEvent) => {
     event.preventDefault();
     // Implement actual authentication logic with backend
+    // Ensure secure communication with HTTPS
     try {
       const userType = await authenticateUser(username, password);
       if (userType === 'teacher') {

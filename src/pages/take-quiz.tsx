@@ -6,7 +6,7 @@ export default function TakeQuiz() {
   const [quizQuestions, setQuizQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   useEffect(() => {
-    // TODO: Fetch quiz questions from the backend
+    // Fetch quiz questions from the backend
     async function fetchQuizQuestions() {
       // Placeholder for backend API call to fetch questions
       const questions = await getQuizQuestions();
