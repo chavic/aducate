@@ -5,9 +5,7 @@ export default function StudentDashboard() {
   const [progress, setProgress] = useState([]);
   useEffect(() => {
     async function fetchProgress() {
-      // Replace with actual API call
-      const response = await fetch('/api/progress');
-      const data = await response.json();
+      const data = await mockApiService.getProgress();
       setProgress(data);
     }
     fetchProgress();

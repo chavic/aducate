@@ -5,9 +5,7 @@ export default function TeacherDashboard() {
   const [courses, setCourses] = useState([]);
   useEffect(() => {
     async function fetchCourses() {
-      // Replace with actual API call
-      const response = await fetch('/api/courses');
-      const data = await response.json();
+      const data = await mockApiService.getCourses();
       setCourses(data);
     }
     fetchCourses();
@@ -30,14 +28,6 @@ export default function TeacherDashboard() {
           <li key={course.id}>{course.name}</li>
         ))}
       </ul>
-    </div>
-  );
-}
-  // Placeholder content for the teacher dashboard
-  return (
-    <div>
-      <h1>Teacher Dashboard</h1>
-      {/* Links to create courses, manage courses, view student progress, etc. */}
     </div>
   );
 }

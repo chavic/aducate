@@ -54,13 +54,3 @@ export default function LoginPage() {
   );
 }
 
-async function determineUserType(username: string, password: string): Promise<'teacher' | 'student' | null> {
-  // Placeholder for user type determination logic
-  // This should be replaced with a real authentication mechanism
-  if (username.startsWith('teacher')) {
-    return 'teacher';
-  } else if (username.startsWith('student')) {
-    return 'student';
-  }
-  return null;
-}
