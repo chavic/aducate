@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }) {
   return (
     <div className="flex flex-column min-h-screen">
-      <header className="bg-white shadow-md p-4">
+      <header className="bg-white shadow-md p-4 mb-8"> /* Added bottom margin to header */
         <nav className="container mx-auto flex justify-between">
           <div>
             <Link href="/">
@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
           </div>
         </nav>
       </header>
-      <main className="container mx-auto p-4 flex-grow">
+      <main className="container mx-auto p-4 flex-grow"> /* Ensured consistent padding */
         {children}
       </main>
       <footer className="bg-white shadow-md p-4 text-center">

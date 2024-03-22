@@ -5,10 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
-  line-height: 1.6;
+  font-family: 'Inter', sans-serif; /* Consistent font family */
+  background-color: #ffffff; /* Light and clean background color */
+  color: #333333; /* Slightly darker font color for better readability */
+  line-height: 1.75; /* Increased line height for better readability */
 }
 
 button, input, textarea {
@@ -16,12 +16,13 @@ button, input, textarea {
 }
 
 a {
-  color: #007bff;
+  color: #0056b3; /* Updated link color for better contrast */
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Visual feedback for hover state */
+  color: #004080; /* Darker color on hover for better feedback */
 }
 
 /* Utility classes for padding and margin */
@@ -108,6 +109,18 @@ a:hover {
   .responsive-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 }
 
