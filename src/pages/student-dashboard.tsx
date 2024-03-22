@@ -1,7 +1,18 @@
 import Link from 'next/link';
 
 export default function StudentDashboard() {
-  // Content for the student dashboard
+  // Enhanced content for the student dashboard with progress tracking
+  const [progress, setProgress] = useState([]);
+  useEffect(() => {
+    async function fetchProgress() {
+      // Replace with actual API call
+      const response = await fetch('/api/progress');
+      const data = await response.json();
+      setProgress(data);
+    }
+    fetchProgress();
+  }, []);
+
   return (
     <div>
       <h1>Student Dashboard</h1>
@@ -13,7 +24,12 @@ export default function StudentDashboard() {
           <li><Link href="/announcements"><a>Announcements</a></Link></li>
         </ul>
       </nav>
-      {/* Additional dashboard content can be added here */}
+      {/* Display progress */}
+      <ul>
+        {progress.map(item => (
+          <li key={item.courseId}>Course: {item.courseName}, Progress: {item.percentage}%</li>
+        ))}
+      </ul>
     </div>
   );
 }

@@ -1,7 +1,18 @@
 import Link from 'next/link';
 
 export default function TeacherDashboard() {
-  // Content for the teacher dashboard
+  // Enhanced content for the teacher dashboard with asynchronous data loading
+  const [courses, setCourses] = useState([]);
+  useEffect(() => {
+    async function fetchCourses() {
+      // Replace with actual API call
+      const response = await fetch('/api/courses');
+      const data = await response.json();
+      setCourses(data);
+    }
+    fetchCourses();
+  }, []);
+
   return (
     <div>
       <h1>Teacher Dashboard</h1>
@@ -13,6 +24,12 @@ export default function TeacherDashboard() {
           <li><Link href="/upcoming-lessons"><a>View Upcoming Lessons</a></Link></li>
         </ul>
       </nav>
+      {/* Display list of courses */}
+      <ul>
+        {courses.map(course => (
+          <li key={course.id}>{course.name}</li>
+        ))}
+      </ul>
     </div>
   );
 }
