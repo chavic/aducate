@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 export default function StudentDashboard() {
-  // Placeholder content for the student dashboard
   return (
     <div>
       <h1>Student Dashboard</h1>
@@ -13,6 +12,7 @@ export default function StudentDashboard() {
           <li><Link href="/announcements"><a>Announcements</a></Link></li>
         </ul>
       </nav>
+      {/* Additional dashboard content can be added here */}
     </div>
   );
 }
