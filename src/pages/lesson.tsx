@@ -5,16 +5,14 @@ export default function LessonPage() {
   // For the demo, we'll use static data
 
   const mockLessonContent = "This is the content of the lesson.";
-  // Placeholder for chat interface
+  import QuizTrigger from '../components/QuizTrigger';
 
   return (
     <div>
       <h1>Lesson Content</h1>
       <p>{mockLessonContent}</p>
-      {/* Placeholder for interactive chat */}
-      <div>Chat interface will be here.</div>
-      {/* Placeholder for generate questions feature */}
-      <div>Question generation feature will be here.</div>
+      {/* Quiz Trigger */}
+      <QuizTrigger />
       <Link href="/student-dashboard"><a>Back to Dashboard</a></Link>
     </div>
   );
