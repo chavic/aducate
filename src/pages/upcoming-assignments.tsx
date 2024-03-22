@@ -21,7 +21,7 @@ export default function UpcomingAssignments() {
           </li>
         ))}
       </ul>
-      <Link href="/student-dashboard"><a>Back to Dashboard</a></Link>
+      <Link href="/student-dashboard"><p>Back to Dashboard</p></Link>
     </div>
   );
 }

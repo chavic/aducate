@@ -37,7 +37,7 @@ export default function CreateCourse() {
         {/* Add more form fields as needed */}
         <button type="submit">Create Course</button>
       </form>
-      <Link href="/teacher-dashboard"><a>Back to Dashboard</a></Link>
+      <Link href="/teacher-dashboard">Back to Dashboard</Link>
     </div>
   );
 }

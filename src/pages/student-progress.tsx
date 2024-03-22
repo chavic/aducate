@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 export default function StudentProgress() {
   // Placeholder for state and logic to fetch and display student progress
@@ -7,7 +8,7 @@ export default function StudentProgress() {
     // Fetch student progress data from the backend
     async function fetchStudentProgress() {
       // Placeholder for backend API call to fetch progress data
-      const progressData = await getStudentProgress();
+      //const progressData = await getStudentProgress();
       // Update state with fetched data
     }
     fetchStudentProgress();
@@ -30,7 +31,7 @@ export default function StudentProgress() {
           </li>
         ))}
       </ul>
-      <Link href="/teacher-dashboard"><a>Back to Dashboard</a></Link>
+      <Link href="/teacher-dashboard"><p>Back to Dashboard</p></Link>
     </div>
   );
 }

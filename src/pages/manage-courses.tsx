@@ -10,7 +10,7 @@ export default function ManageCourses() {
       {/* Placeholder for course list */}
       <p>List of courses will be displayed here.</p>
       {/* Add functionality to edit and delete courses */}
-      <Link href="/teacher-dashboard"><a>Back to Dashboard</a></Link>
+      <Link href="/teacher-dashboard"><p>Back to Dashboard</p></Link>
     </div>
   );
 }

@@ -12,7 +12,7 @@ export default function LessonCompletion() {
       <h1>Lesson Completed</h1>
       <p>Your score: {lessonCompletionData.score}%</p>
       <p>{lessonCompletionData.feedback}</p>
-      <Link href="/student-dashboard"><a>Return to Dashboard</a></Link>
+      <Link href="/student-dashboard">Return to Dashboard</Link>
     </div>
   );
 }

@@ -30,7 +30,7 @@ export default function LearningOverview() {
           </li>
         ))}
       </ul>
-      <Link href="/student-dashboard"><a>Back to Dashboard</a></Link>
+      <Link href="/student-dashboard">Back to Dashboard</Link>
     </div>
   );
 }

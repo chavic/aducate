@@ -2,8 +2,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Chat from '../components/Chat';
 import QuizTrigger from '../components/QuizTrigger';
-// Import a hypothetical Chat component, which you would need to implement
-import Chat from '../components/Chat';
+
 
 export default function LessonPage() {
   // Placeholder for state and logic to fetch and display lesson content
@@ -37,15 +36,8 @@ export default function LessonPage() {
       {/* Placeholder for generate questions feature */}
       {/* This will be replaced with actual implementation when backend is ready */}
       <div>Question generation feature will be here.</div>
-      <Link href="/student-dashboard"><a>Back to Dashboard</a></Link>
+      <Link href="/student-dashboard">Back to Dashboard</Link>
     </div>
   );
 }
-      {/* Placeholder for interactive chat */}
-      <div>Chat interface will be here.</div>
-      {/* Placeholder for generate questions feature */}
-      <div>Question generation feature will be here.</div>
-      <Link href="/student-dashboard"><a>Back to Dashboard</a></Link>
-    </div>
-  );
-}
+

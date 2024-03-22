@@ -1,4 +1,6 @@
+import { mockApiService } from '@/mocks/mockApiService';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 export default function TeacherDashboard() {
   // Enhanced content for the teacher dashboard with asynchronous data loading
@@ -16,10 +18,10 @@ export default function TeacherDashboard() {
       <h1>Teacher Dashboard</h1>
       <nav>
         <ul>
-          <li><Link href="/create-course"><a>Create Course</a></Link></li>
-          <li><Link href="/manage-courses"><a>Manage Courses</a></Link></li>
-          <li><Link href="/student-progress"><a>View Student Progress</a></Link></li>
-          <li><Link href="/upcoming-lessons"><a>View Upcoming Lessons</a></Link></li>
+          <li><Link href="/create-course"><p>Create Course</p></Link></li>
+          <li><Link href="/manage-courses"><p>Manage Courses</p></Link></li>
+          <li><Link href="/student-progress"><p>View Student Progress</p></Link></li>
+          <li><Link href="/upcoming-lessons"><p>View Upcoming Lessons</p></Link></li>
         </ul>
       </nav>
       {/* Display list of courses */}

@@ -31,7 +31,7 @@ export default function TakeQuiz() {
       {/* Submit answer button */}
       <button onClick={() => submitAnswer('example answer')}>Submit Answer</button>
       {/* Link to return to the dashboard */}
-      <Link href="/student-dashboard"><a>Back to Dashboard</a></Link>
+      <Link href="/student-dashboard"><p>Back to Dashboard</p></Link>
     </div>
   );
 }
