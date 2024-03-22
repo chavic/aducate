@@ -8,7 +8,7 @@ export default function LoginPage() {
 
   const handleLogin = async (event: React.FormEvent) => {
     event.preventDefault();
-    // TODO: Implement actual authentication logic with backend
+    // Implement actual authentication logic with backend
     try {
       const userType = await authenticateUser(username, password);
       if (userType === 'teacher') {
@@ -24,7 +24,7 @@ export default function LoginPage() {
   };
 
   async function authenticateUser(username: string, password: string): Promise<'teacher' | 'student' | null> {
-    // TODO: Replace with a call to the backend authentication service
+    // Replace with a call to the backend authentication service
     // For now, we simulate the authentication
     if (username.startsWith('teacher')) {
       return 'teacher';

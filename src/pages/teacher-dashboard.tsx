@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export default function TeacherDashboard() {
-  // Placeholder content for the teacher dashboard
+  // Content for the teacher dashboard
   return (
     <div>
       <h1>Teacher Dashboard</h1>

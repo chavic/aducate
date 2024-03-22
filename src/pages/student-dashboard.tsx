@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 export default function StudentDashboard() {
+  // Content for the student dashboard
   return (
     <div>
       <h1>Student Dashboard</h1>
