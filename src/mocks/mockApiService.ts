@@ -48,5 +48,45 @@ export const mockApiService = {
     console.log('Course created:', courseName, courseDescription);
     return { id: 'course-4', name: courseName, description: courseDescription };
   },
+  submitAssignment: async (assignmentId: string, studentId: string, content: string) => {
+    // Simulate assignment submission
+    console.log('Assignment submitted:', assignmentId, studentId, content);
+    return { success: true, message: 'Assignment submitted successfully' };
+  },
+  getAnnouncements: async () => {
+    // Simulate fetching announcements
+    return [
+      { id: 'announcement-1', content: 'Midterm exams next week.' },
+      { id: 'announcement-2', content: 'School science fair dates announced.' },
+      { id: 'announcement-3', content: 'New library books have arrived.' },
+    ];
+  },
+  connectToChat: async (lessonId: string) => {
+    // Simulate connecting to a chat WebSocket
+    console.log('Connected to chat for lesson:', lessonId);
+    // This is a placeholder, in a real application you would return a WebSocket connection
+    return { success: true, message: 'Connected to chat' };
+  },
+  submitQuizAnswers: async (quizId: string, studentId: string, answers: Array<{ questionId: string, answer: string }>) => {
+    // Simulate quiz answer submission
+    console.log('Quiz answers submitted:', quizId, studentId, answers);
+    return { success: true, score: 80 }; // Simulate a score calculation
+  },
+  getAnalytics: async (teacherId: string) => {
+    // Simulate fetching progress and performance analytics
+    return [
+      { courseId: 'course-1', averageScore: 75 },
+      { courseId: 'course-2', averageScore: 82 },
+      { courseId: 'course-3', averageScore: 78 },
+    ];
+  },
+  getLearningMaterials: async (courseId: string) => {
+    // Simulate fetching learning materials
+    return [
+      { materialId: 'material-1', title: 'Introduction to Algebra', content: 'Algebra is...' },
+      { materialId: 'material-2', title: 'Biology Basics', content: 'Biology is the study of...' },
+      { materialId: 'material-3', title: 'World War II', content: 'World War II was...' },
+    ];
+  },
   // Add more mock API methods as needed
 };
